@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+// import Logon from './pages/Logon'; //nao e preciso index que sempre o ficheiro procurado e o index
+import './global.css';
+import Routes from './routes';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Francisco aragao
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes/>
+
   );
 }
 
 export default App;
+
+/**  Experiencias com JSX
+ * 
+ * import React,{useState} from 'react';// use state permite alterar o valor sem refrescar a pagina
+
+
+import Header from './Header'; primeia expreriencia
+// JSX (java script e xml) html intregado na java script
+ * 
+ * function App() {
+const [count, setCount] = useState(0);// usestate retorna uma Array[valor, fucnçãoDeActualição]
+
+function increment(){
+  setCount(count + 1)//Dessa forma posso ter actualização da variavel
+}
+  return (
+    <div>
+    <Header>
+      Contador: {count}
+          </Header>
+    <button onClick={increment}>Incrementar</button>
+    </div>
+  );
+}
+*/
